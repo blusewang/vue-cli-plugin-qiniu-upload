@@ -58,11 +58,9 @@ module.exports = (api, projectOptions) => {
                 }
             })
 
-
             let configOptions = projectOptions.pluginOptions.qiniuUpload || {}
-            let uploaderOptions = { ...configOptions, ...commandOptions }
 
-            console.log(uploaderOptions)
+            new Uploader({ ...configOptions, ...commandOptions }).start()
         }
     )
 }   
