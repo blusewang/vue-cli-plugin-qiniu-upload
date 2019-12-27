@@ -47,16 +47,20 @@ module.exports = (api, projectOptions) => {
                 'For more options, see https://github.com/liuyunzhuge/simple-qiniu-upload and camelcase options must be transfered to hyphen case when used in command line'
         },
         args => {
-            let uploaderOptions = {}
+            let commandOptions = {}
 
             Object.keys(args).forEach(argName => {
                 let name = camelize(argName)
                 if (name === 'zone') {
-                    uploaderOptions[name] = resolveZone(args[argName])
+                    commandOptions[name] = resolveZone(args[argName])
                 } else if (optionNames[name]) {
-                    uploaderOptions[name] = resolveArgValue(args[argName])
+                    commandOptions[name] = resolveArgValue(args[argName])
                 }
             })
+
+
+            let configOptions = projectOptions.pluginOptions.qiniuUpload || {}
+            let uploaderOptions = { ...configOptions, ...commandOptions }
 
             console.log(uploaderOptions)
         }

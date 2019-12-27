@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/liuyunzhuge/vue-cli-plugin-qiniu-upload#readme",
   "dependencies": {
-    "simple-qiniu-upload": "^0.1.7"
+    "simple-qiniu-upload": "^0.1.8"
   }
 }
