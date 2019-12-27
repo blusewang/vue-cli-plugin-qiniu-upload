@@ -1,4 +1,4 @@
-import Uploader from 'simple-qiniu-upload'
+const Uploader = require('simple-qiniu-upload')
 
 function camelize(str) {
     return str.replace(/-(\w)/g, (_, c) => c ? c.toUpperCase() : '')
