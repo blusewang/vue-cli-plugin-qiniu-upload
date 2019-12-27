@@ -54,7 +54,7 @@ module.exports = (api, projectOptions) => {
                 if (name === 'zone') {
                     uploaderOptions[name] = resolveZone(args[argName])
                 } else if (optionNames[name]) {
-                    uploaderOptions = resolveArgValue(args[argName])
+                    uploaderOptions[name] = resolveArgValue(args[argName])
                 }
             })
 
