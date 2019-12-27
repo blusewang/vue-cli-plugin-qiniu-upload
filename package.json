@@ -1,0 +1,22 @@
+{
+  "name": "vue-cli-plugin-qiniu-upload",
+  "version": "0.1.4",
+  "description": "vue plugin for simple-qiniu-upload.",
+  "main": "src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/liuyunzhuge/vue-cli-plugin-qiniu-upload"
+  },
+  "keywords": [
+    "vue-cli-plugin-qiniu-upload"
+  ],
+  "author": "liuyunzhuge",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/liuyunzhuge/vue-cli-plugin-qiniu-upload/issues"
+  },
+  "homepage": "https://github.com/liuyunzhuge/vue-cli-plugin-qiniu-upload#readme",
+  "dependencies": {
+    "simple-qiniu-upload": "^0.1.4"
+  }
+}
