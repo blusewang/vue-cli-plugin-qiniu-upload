@@ -1,3 +1,7 @@
+[![npm](https://img.shields.io/npm/dm/vue-cli-plugin-qiniu-upload.svg)](https://www.npmjs.com/package/vue-cli-plugin-qiniu-upload)
+[![npm](https://img.shields.io/npm/v/vue-cli-plugin-qiniu-upload.svg)](https://www.npmjs.com/package/vue-cli-plugin-qiniu-upload)
+[![npm](https://img.shields.io/npm/l/vue-cli-plugin-qiniu-upload.svg)](https://www.npmjs.com/package/vue-cli-plugin-qiniu-upload)
+
 # vue-cli-plugin-qiniu-upload
 可在vue-cli中使用的simple-qiniu-upload；会通过vue-cli-service注册upload命令。
 
