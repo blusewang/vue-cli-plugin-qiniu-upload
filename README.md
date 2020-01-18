@@ -102,3 +102,42 @@ module.exports = {
     ```
     因为crossorigin只会给注入`index.html`的脚本添加`crossorigin`属性，但是那些动态加载的`chunk`文件不会添加，所以需手动配置`webpack`。
 
+## 删除命令
+由于[simple-qiniu-upload](https://github.com/liuyunzhuge/simple-qiniu-upload)新增了按照前缀，删除指定文件的功能，所以此插件也提供了一个新的`delete`命令支持文件的删除。
+
+此命令提供的额外option如下：
+```
+--fetch-page-size: specify page size when fetch qiniu files to delete(default: 500),
+--fetch-prefix: specify prefix of files to delete(default: empty string, required),
+--fetch-file: specify filename for fetch results(default: qiniu-prefix-fetch.json),
+--delete-batch-size: specify batch size when delete(default: 100),
+--delete-file: specify filename for delete results(default: qiniu-batch-delete.json)
+```
+
+如果要在命令行上使用，只需要这么做：
+```json
+  "scripts": {
+    "delete": "vue-cli-service delete --fetch-page-size 1000 --fetch-prefix=v1.0.0/"
+  },
+```
+
+以上的配置也可以在`vue.config.js`中配置：
+```js
+pluginOptions: {
+    qiniuUpload: {
+        accessKey: process.env.accessKey,
+        secretKey: process.env.secretKey,
+        envFile: false,
+        base: 'dist',
+        glob: 'dist/**',
+        globIgnore: [
+            `dist/!(${process.env.VUE_APP_ASSETS_DIR})/**`
+        ],
+        bucket: 'static',
+        overrides: true,
+        parallelCount: 2,
+        fetchPrefix: 'v0.1.0/'
+    }
+}
+```
+`fetchPrefix`用来指定要删除的文件目录前缀，最后一定要用`/`结尾。
