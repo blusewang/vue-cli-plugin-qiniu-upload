@@ -2,7 +2,7 @@
   "name": "vue-cli-plugin-qiniu-upload",
   "version": "0.2.3",
   "description": "vue plugin for simple-qiniu-upload.",
-  "main": "src/index.js",
+  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/liuyunzhuge/vue-cli-plugin-qiniu-upload"
